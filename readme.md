@@ -1,8 +1,8 @@
 React with Server Side Rendering :
 
 Tools :
-1. Yarn
-2. Node versi >= 8.X.X
+1. Yarn version >= 1.6.0
+2. Node version >= 8.X.X
 
 Running :
 `yarn start`
