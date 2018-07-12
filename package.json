@@ -8,8 +8,7 @@
   "private": false,
   "scripts": {
     "build": "webpack",
-    "start": "webpack-dev-server",
-    "start:server": "nodemon --require babel-core/register ./src/server "
+    "start": "nodemon --require babel-core/register ./src/server "
   },
   "dependencies": {
     "express": "^4.16.3",

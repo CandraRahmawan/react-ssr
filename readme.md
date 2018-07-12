@@ -4,9 +4,9 @@ Tools :
 1. Yarn version >= 1.6.0
 2. Node version >= 8.X.X
 
+run `yarn install` first to install depedencies.
+
 Running :
 `yarn start`
 
-running at http://localhost:8080/
-
-Sources still in progress...
+running at http://localhost:8000/
