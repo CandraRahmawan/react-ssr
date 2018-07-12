@@ -1,9 +1,9 @@
-import React, {Component} from 'react';
+import React, {Component, Fragment} from 'react';
 
 export default class Entry extends Component {
   render() {
     return (
-      <div>
+      <Fragment>
         <h1>Server Side Rendering with ReactJS</h1>
         <h3>Technology used : </h3>
         <ul>
@@ -16,7 +16,7 @@ export default class Entry extends Component {
         <ul>
           <li>Jest</li>
         </ul>
-      </div>
+      </Fragment>
     )
   }
 };

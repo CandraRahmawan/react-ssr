@@ -9,8 +9,11 @@ export default class TemplateHtml extends Component {
         <title>Server Side Rendering with ReactJS</title>
       </head>
       <body>
-      <div id="app"><Entry/></div>
+      <div id="app">
+        {this.props.entry}
+      </div>
       </body>
+      <script src="main.bundle.js"></script>
       </html>
     )
   }
