@@ -1,7 +1,7 @@
 import React from 'react';
 import {Switch, Route} from 'react-router-dom';
 import AppRoot from '../clients/AppRoot';
-import AboutUs from '../clients/AboutUs';
+import AboutUs from '../clients/pages/AboutUs';
 
 const routes =
   <Switch>
