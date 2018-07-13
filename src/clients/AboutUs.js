@@ -4,7 +4,9 @@ export default class AboutUs extends Component {
   render() {
     return (
       <Fragment>
-        this page about us ...
+        <div>
+          this page about us ...
+        </div>
       </Fragment>
     )
   }

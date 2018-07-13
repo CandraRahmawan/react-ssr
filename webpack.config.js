@@ -1,4 +1,5 @@
 const path = require('path');
+const SimpleProgressWebpackPlugin = require('simple-progress-webpack-plugin');
 
 module.exports = {
   entry: './src/clients/Index.js',
@@ -15,5 +16,10 @@ module.exports = {
       }
     ]
   },
-  mode: 'development'
+  mode: 'development',
+  plugins: [
+    new SimpleProgressWebpackPlugin({
+      format: 'expanded'
+    })
+  ]
 };

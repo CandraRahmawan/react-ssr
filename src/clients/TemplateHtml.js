@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Entry from './Entry';
+import AppRoot from './AppRoot';
 
 export default class TemplateHtml extends Component {
   render() {
@@ -9,9 +9,7 @@ export default class TemplateHtml extends Component {
         <title>Server Side Rendering with ReactJS</title>
       </head>
       <body>
-      <div id="app">
-        {this.props.entry}
-      </div>
+      <div id="app" dangerouslySetInnerHTML={{__html: this.props.entry}}></div>
       </body>
       <script src="main.bundle.js"></script>
       </html>

@@ -1,15 +1,15 @@
 import React from 'react';
 import {renderToString} from 'react-dom/server';
-import Entry from '../clients/Entry';
 import TemplateHtml from '../clients/TemplateHtml';
 import {StaticRouter} from 'react-router-dom';
+import routes from '../routes/route';
 
 
 export default (req, res) => {
-  const context = {};
+  let context = {};
   const entry = renderToString(
     <StaticRouter location={req.url} context={context}>
-      <Entry/>
+      {routes}
     </StaticRouter>
   );
   const renderTemplate = renderToString(
