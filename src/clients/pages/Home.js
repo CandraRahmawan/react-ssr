@@ -1,10 +1,12 @@
 import React, {Component, Fragment} from 'react';
 import {Link} from 'react-router-dom';
+import Header from '../components/Header';
 
-export default class AppRoot extends Component {
+export default class Home extends Component {
   render() {
     return (
       <Fragment>
+        <Header/>
         <h1>Server Side Rendering with ReactJS</h1>
         <h3>Technology used : </h3>
         <Link to='/about-us'>About Us</Link>

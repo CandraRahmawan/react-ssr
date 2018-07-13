@@ -1,4 +1,3 @@
 /node_modules
 .idea
 __coverage__
-**/__test__/__snapshots__

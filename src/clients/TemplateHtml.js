@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import AppRoot from './AppRoot';
 
 export default class TemplateHtml extends Component {
   render() {
