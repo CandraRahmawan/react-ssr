@@ -3,5 +3,13 @@
     "react",
     "env",
     "stage-1"
+  ],
+  "plugins": [
+    [
+      "babel-plugin-styled-components",
+      {
+        "ssr": true
+      }
+    ]
   ]
 }

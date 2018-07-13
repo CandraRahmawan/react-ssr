@@ -23,9 +23,10 @@ class TemplateHtml extends Component {
       <html>
       <head>
         <title>Server Side Rendering with ReactJS</title>
+        <div id="styled-components" dangerouslySetInnerHTML={{__html: this.props.styleTags}}/>
       </head>
       <body>
-      <div id="app" dangerouslySetInnerHTML={{__html: this.props.entry}}></div>
+      <div id="app" dangerouslySetInnerHTML={{__html: this.props.entry}}/>
       </body>
       <div
         id="script-assets"
