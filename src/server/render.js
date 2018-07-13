@@ -4,7 +4,6 @@ import TemplateHtml from '../clients/TemplateHtml';
 import {StaticRouter} from 'react-router-dom';
 import routes from '../routes/route';
 
-
 export default (req, res) => {
   let context = {};
   const entry = renderToString(

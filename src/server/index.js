@@ -7,7 +7,6 @@ import webpackConfig from '../../webpack.config';
 const app = express();
 const compiler = webpack(webpackConfig);
 
-app.use('/assets', express.static('dist'));
 app.use(wdm(compiler, {
   publicPath: webpackConfig.output.publicPath
 }));
