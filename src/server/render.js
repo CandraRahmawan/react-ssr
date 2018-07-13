@@ -12,7 +12,7 @@ export default (req, res) => {
     </StaticRouter>
   );
   const renderTemplate = renderToString(
-    <TemplateHtml entry={entry}/>
+    <TemplateHtml entry={entry} assetsByChunkName={res.locals.webpackStats.toJson().assetsByChunkName}/>
   );
   res.send(`<!doctype html> ${renderTemplate}`);
 };

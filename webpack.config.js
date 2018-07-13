@@ -1,8 +1,9 @@
 const path = require('path');
+const webpack = require('webpack');
 const SimpleProgressWebpackPlugin = require('simple-progress-webpack-plugin');
 
 module.exports = {
-  entry: './src/clients/Index.js',
+  entry: ['./src/clients/Index.js', 'webpack-hot-middleware/client?path=http://localhost:8000/__webpack_hmr'],
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'main.bundle.js',
@@ -20,6 +21,7 @@ module.exports = {
   plugins: [
     new SimpleProgressWebpackPlugin({
       format: 'expanded'
-    })
+    }),
+    new webpack.HotModuleReplacementPlugin(),
   ]
 };

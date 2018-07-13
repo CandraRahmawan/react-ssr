@@ -1,6 +1,23 @@
 import React, {Component} from 'react';
+import _ from 'lodash';
+import {hot} from 'react-hot-loader';
 
-export default class TemplateHtml extends Component {
+class TemplateHtml extends Component {
+  normalizeAssets = assets => (_.isArray(assets) ? assets : [assets]);
+
+  renderScriptAssets = () =>
+    _.map(this.props.assetsByChunkName, items => {
+      const item = _.filter(this.normalizeAssets(items), path =>
+        path.endsWith('.js')
+      );
+      return item
+        .map(
+          item =>
+            `<script src="${item}"></script>`
+        )
+        .join('\n');
+    }).join('\n');
+
   render() {
     return (
       <html>
@@ -10,8 +27,13 @@ export default class TemplateHtml extends Component {
       <body>
       <div id="app" dangerouslySetInnerHTML={{__html: this.props.entry}}></div>
       </body>
-      <script src="main.bundle.js"></script>
+      <div
+        id="script-assets"
+        dangerouslySetInnerHTML={{__html: this.renderScriptAssets()}}
+      />
       </html>
     )
   }
 }
+
+export default hot(module)(TemplateHtml);
