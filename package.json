@@ -8,7 +8,8 @@
   "private": false,
   "scripts": {
     "build": "webpack",
-    "start": "nodemon --require babel-core/register ./src/server "
+    "start": "nodemon --require babel-core/register ./src/server",
+    "test": "jest"
   },
   "dependencies": {
     "express": "^4.16.3",
@@ -22,6 +23,7 @@
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
+    "jest": "^23.4.0",
     "nodemon": "^1.18.1",
     "simple-progress-webpack-plugin": "^1.1.2",
     "webpack": "^4.14.0",
