@@ -7,15 +7,21 @@
   "license": "MIT",
   "private": false,
   "scripts": {
+    "prettier": "prettier --single-quote --trailing-comma es5 --write src/**/*.js",
     "build": "webpack",
     "start": "nodemon --require babel-core/register ./src/server --watch ./src/server",
     "test": "jest",
-    "test:watch": "jest --watch --collectCoverage=false",
-    "prepush": "yarn test"
+    "test:watch": "jest --watch --collectCoverage=false"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "yarn test",
+      "pre-commit": "lint-staged"
+    }
   },
   "lint-staged": {
-    "*.{js}": [
-      "prettier --single-quote --trailing-comma es5 --write",
+    "*.js": [
+      "yarn prettier",
       "git add"
     ]
   },
