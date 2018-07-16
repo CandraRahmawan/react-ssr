@@ -9,7 +9,8 @@
   "scripts": {
     "build": "webpack",
     "start": "nodemon --require babel-core/register ./src/server --watch ./src/server",
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "jest --watch --collectCoverage=false"
   },
   "dependencies": {
     "express": "^4.16.3",
@@ -28,6 +29,8 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-1": "^6.24.1",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "jest": "^23.4.0",
     "nodemon": "^1.18.1",
     "react-hot-loader": "^4.3.3",
