@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import _ from 'lodash';
-import {hot} from 'react-hot-loader';
 
-class TemplateHtml extends Component {
+export default class TemplateHtml extends Component {
   normalizeAssets = assets => (_.isArray(assets) ? assets : [assets]);
 
   renderScriptAssets = () =>
@@ -36,5 +35,3 @@ class TemplateHtml extends Component {
     )
   }
 }
-
-export default hot(module)(TemplateHtml);

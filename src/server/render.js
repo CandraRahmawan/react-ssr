@@ -2,7 +2,7 @@ import React from 'react';
 import {renderToString} from 'react-dom/server';
 import TemplateHtml from '../clients/TemplateHtml';
 import {StaticRouter} from 'react-router-dom';
-import routes from '../routes/route';
+import Routes from '../routes/route';
 import {ServerStyleSheet, StyleSheetManager} from 'styled-components';
 
 export default (req, res) => {
@@ -11,7 +11,7 @@ export default (req, res) => {
   const entry = renderToString(
     <StyleSheetManager sheet={sheet.instance}>
       <StaticRouter location={req.url} context={context}>
-        {routes}
+        <Routes/>
       </StaticRouter>
     </StyleSheetManager>
   );
