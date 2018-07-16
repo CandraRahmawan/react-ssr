@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {hydrate} from 'react-dom';
-import {BrowserRouter, Switch, Route} from 'react-router-dom';
+import {BrowserRouter} from 'react-router-dom';
 import Routes from '../routes/route';
 import {injectGlobal} from 'styled-components';
 import {hot} from 'react-hot-loader';

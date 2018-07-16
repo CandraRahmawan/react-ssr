@@ -1,6 +1,7 @@
 import React, {Component, Fragment} from 'react';
 import {Link} from 'react-router-dom';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 export default class Home extends Component {
   render() {
@@ -9,7 +10,6 @@ export default class Home extends Component {
         <Header/>
         <h1>Server Side Rendering with ReactJS</h1>
         <h3>Technology used : </h3>
-        <Link to='/about-us'>About Us</Link>
         <ul>
           <li>React JS for Core</li>
           <li>Express for Server</li>
@@ -20,6 +20,7 @@ export default class Home extends Component {
         <ul>
           <li>Jest</li>
         </ul>
+        <Footer/>
       </Fragment>
     )
   }
