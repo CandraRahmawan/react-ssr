@@ -1,9 +1,9 @@
-import React, {Component} from 'react';
-import {hydrate} from 'react-dom';
-import {BrowserRouter} from 'react-router-dom';
+import React, { Component } from 'react';
+import { render } from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
 import Routes from '../routes/route';
-import {injectGlobal} from 'styled-components';
-import {hot} from 'react-hot-loader';
+import { injectGlobal } from 'styled-components';
+import { hot } from 'react-hot-loader';
 
 injectGlobal`
   body {
@@ -15,12 +15,12 @@ class Index extends Component {
   render() {
     return (
       <BrowserRouter>
-        <Routes/>
+        <Routes />
       </BrowserRouter>
-    )
+    );
   }
 }
 
-hot(module)(<Index/>);
+hot(module)(<Index />);
 
-hydrate(<Index/>, document.getElementById('app'));
+render(<Index />, document.getElementById('app'));
