@@ -8,11 +8,13 @@ import webpackConfig from '../../webpack.config';
 const app = express();
 const compiler = webpack(webpackConfig);
 
-app.use(webpackDevMiddleware(compiler, {
-  noInfo: true,
-  serverSideRender: true,
-  publicPath: webpackConfig.output.publicPath
-}));
+app.use(
+  webpackDevMiddleware(compiler, {
+    noInfo: true,
+    serverSideRender: true,
+    publicPath: webpackConfig.output.publicPath,
+  })
+);
 app.use(webpackHotMiddleware(compiler));
 app.get('*', render);
 

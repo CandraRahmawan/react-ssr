@@ -1,11 +1,11 @@
 import TemplateHtml from '../clients/TemplateHtml';
 
 describe('<TemplateHtml />', () => {
-  const shallowComponent = shallow(<TemplateHtml/>);
+  const shallowComponent = shallow(<TemplateHtml />);
 
   test('Should be correct match snapshot', () => {
     const component = renderer.create(
-      <TemplateHtml entry="test content..." styletags="styletags..."/>
+      <TemplateHtml entry="test content..." styletags="styletags..." />
     );
     let tree = component.toJSON();
     expect(tree).toMatchSnapshot();

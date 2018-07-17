@@ -1,9 +1,9 @@
 import React from 'react';
-import {renderToString} from 'react-dom/server';
+import { renderToString } from 'react-dom/server';
 import TemplateHtml from '../clients/TemplateHtml';
-import {StaticRouter} from 'react-router-dom';
+import { StaticRouter } from 'react-router-dom';
 import Routes from '../routes/route';
-import {ServerStyleSheet, StyleSheetManager} from 'styled-components';
+import { ServerStyleSheet, StyleSheetManager } from 'styled-components';
 
 export default (req, res) => {
   const sheet = new ServerStyleSheet();
@@ -11,7 +11,7 @@ export default (req, res) => {
   const entry = renderToString(
     <StyleSheetManager sheet={sheet.instance}>
       <StaticRouter location={req.url} context={context}>
-        <Routes/>
+        <Routes />
       </StaticRouter>
     </StyleSheetManager>
   );

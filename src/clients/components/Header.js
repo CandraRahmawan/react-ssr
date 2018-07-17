@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Wrapper = styled.div`
   width: 100%;
@@ -34,16 +34,16 @@ export default class Header extends Component {
       <Wrapper>
         <ListMenuWrapper>
           <MenuItem>
-            <Link to='/'>Home</Link>
+            <Link to="/">Home</Link>
           </MenuItem>
           <MenuItem>
-            <Link to='/about-us'>About Us</Link>
+            <Link to="/about-us">About Us</Link>
           </MenuItem>
           <MenuItem>
-            <Link to='/contact-us'>Contact Us</Link>
+            <Link to="/contact-us">Contact Us</Link>
           </MenuItem>
         </ListMenuWrapper>
       </Wrapper>
-    )
+    );
   }
 }

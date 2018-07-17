@@ -1,4 +1,4 @@
-import React, {Component, Fragment} from 'react';
+import React, { Component, Fragment } from 'react';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
@@ -14,10 +14,6 @@ const Wrapper = styled.div`
 
 export default class Footer extends Component {
   render() {
-    return (
-      <Wrapper>
-        Supported By ReactJS
-      </Wrapper>
-    )
+    return <Wrapper>Supported By ReactJS</Wrapper>;
   }
 }
