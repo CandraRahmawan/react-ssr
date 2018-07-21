@@ -4,6 +4,16 @@ import _ from 'lodash';
 export default class TemplateHtml extends Component {
   normalizeAssets = assets => (_.isArray(assets) ? assets : [assets]);
 
+  renderStylesAssets = () =>
+    _.map(this.props.assetsByChunkName, items => {
+      const item = _.filter(this.normalizeAssets(items), path =>
+        path.endsWith('.css')
+      );
+      return item
+        .map(item => `<link href="${item}" rel="stylesheet"></>`)
+        .join('\n');
+    }).join('\n');
+
   renderScriptAssets = () =>
     _.map(this.props.assetsByChunkName, items => {
       const item = _.filter(this.normalizeAssets(items), path =>
@@ -17,6 +27,10 @@ export default class TemplateHtml extends Component {
       <html>
         <head>
           <title>Server Side Rendering with ReactJS</title>
+          <div
+            id="style"
+            dangerouslySetInnerHTML={{ __html: this.renderStylesAssets() }}
+          />
           <div
             id="styled-components"
             dangerouslySetInnerHTML={{ __html: this.props.styleTags }}

@@ -5,10 +5,30 @@
     "stage-1"
   ],
   "plugins": [
+    "react-css-modules",
+    [
+      "babel-plugin-inline-import",
+      {
+        "extensions": [
+          ".txt"
+        ]
+      }
+    ],
     [
       "babel-plugin-styled-components",
       {
         "ssr": true
+      }
+    ],
+    [
+      "prismjs",
+      {
+        "languages": [
+          "javascript",
+          "markup"
+        ],
+        "theme": "tomorrow",
+        "css": true
       }
     ]
   ]

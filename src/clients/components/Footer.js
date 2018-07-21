@@ -2,7 +2,6 @@ import React, { Component, Fragment } from 'react';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-  margin-top: 50px;
   background-color: #8e44ad;
   width: 100%;
   color: #fff;

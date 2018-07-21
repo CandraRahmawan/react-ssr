@@ -37,7 +37,7 @@ export default class Header extends Component {
             <Link to="/">Home</Link>
           </MenuItem>
           <MenuItem>
-            <Link to="/about-us">About Us</Link>
+            <Link to="/guide">Guide</Link>
           </MenuItem>
           <MenuItem>
             <Link to="/contact-us">Contact Us</Link>

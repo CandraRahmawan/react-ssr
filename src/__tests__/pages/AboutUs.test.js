@@ -1,9 +1,9 @@
-import AboutUs from '../../clients/pages/AboutUs';
+import Index from '../../clients/pages/guide/Index';
 import Header from '../../clients/components/Header';
 import Footer from '../../clients/components/Footer';
 
 describe('<Home />', () => {
-  const shallowComponent = shallow(<AboutUs />);
+  const shallowComponent = shallow(<Index />);
 
   test('Should be render Header', () => {
     expect(shallowComponent.find(Header).exists()).toBe(true);
