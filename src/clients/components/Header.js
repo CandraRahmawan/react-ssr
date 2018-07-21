@@ -37,10 +37,10 @@ export default class Header extends Component {
             <Link to="/">Home</Link>
           </MenuItem>
           <MenuItem>
-            <Link to="/guide">Guide</Link>
+            <Link to="/guide">Basic Guide</Link>
           </MenuItem>
           <MenuItem>
-            <Link to="/contact-us">Contact Us</Link>
+            <Link to="/run-script">Run Script</Link>
           </MenuItem>
         </ListMenuWrapper>
       </Wrapper>

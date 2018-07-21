@@ -15,10 +15,11 @@ export default class Home extends Component {
             <li>React JS</li>
             <li>Express</li>
             <li>Webpack 4</li>
-            <li>React Router</li>
+            <li>React Router 4</li>
             <li>Jest / Enzyme</li>
             <li>Styled Component</li>
             <li>Prettier</li>
+            <li>Nodemon</li>
           </ol>
         </BodyContainer>
         <Footer />

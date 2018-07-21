@@ -1,0 +1,7 @@
+//package.json
+
+{
+  "scripts": {
+    "start": "nodemon --require babel-core/register ./src/server --watch ./src/server"
+  }
+}

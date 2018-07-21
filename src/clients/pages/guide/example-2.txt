@@ -1,24 +1,18 @@
-// src/server/index.js
+// src/Index.js
 
-import express from 'express';
-import render from './render';
-import webpackDevMiddleware from 'webpack-dev-middleware';
-import webpackHotMiddleware from 'webpack-hot-middleware';
-import webpack from 'webpack';
-import webpackConfig from '../../webpack.config';
+import React, { Component } from 'react';
+import { render } from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
+import Routes from '../routes/route'; //create pararel
 
-const app = express();
-const compiler = webpack(webpackConfig);
+class Index extends Component {
+  render() {
+    return (
+      <BrowserRouter>
+        <Routes />
+      </BrowserRouter>
+    );
+  }
+}
 
-app.use(express.static('public'));
-app.use(
-  webpackDevMiddleware(compiler, {
-    noInfo: true,
-    serverSideRender: true,
-    publicPath: webpackConfig.output.publicPath,
-  })
-);
-app.use(webpackHotMiddleware(compiler));
-app.get('*', render);
-
-app.listen(80010, () => console.log('App Listening at Port 8000'));
+render(<Index />, document.getElementById('app'));
