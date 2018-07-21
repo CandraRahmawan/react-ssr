@@ -6,12 +6,6 @@
   ],
   "plugins": [
     [
-      "css-modules-transform",
-      {
-        "extractCss": "./public/styles.css"
-      }
-    ],
-    [
       "babel-plugin-inline-import",
       {
         "extensions": [

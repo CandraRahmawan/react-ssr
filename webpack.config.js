@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const SimpleProgressWebpackPlugin = require('simple-progress-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   entry: [
@@ -9,7 +10,7 @@ module.exports = {
   ],
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'main.bundle.js',
+    filename: '[name].[hash].js',
     publicPath: '/',
   },
   module: {
@@ -29,15 +30,14 @@ module.exports = {
                   },
                 ],
               ],
-              cacheDirectory: false,
             },
           },
         ],
         exclude: /node_modules/,
       },
       {
-        test: /\.txt$/,
-        use: 'raw-loader',
+        test: /\.css$/,
+        use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
     ],
   },
@@ -46,6 +46,14 @@ module.exports = {
       format: 'expanded',
     }),
     new webpack.HotModuleReplacementPlugin(),
+    new MiniCssExtractPlugin({
+      filename: 'styles.[hash].css',
+    }),
   ],
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+    },
+  },
   mode: 'development',
 };

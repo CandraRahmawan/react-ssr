@@ -5,7 +5,9 @@ export default (codeSyntak, lang = Prism.languages.javascript) => (
   <pre className="language-javascript">
     <code
       className="language-javascript"
-      dangerouslySetInnerHTML={{ __html: Prism.highlight(codeSyntak, lang) }}
+      dangerouslySetInnerHTML={{
+        __html: Prism.highlight(codeSyntak, lang, 'javascript'),
+      }}
     />
   </pre>
 );

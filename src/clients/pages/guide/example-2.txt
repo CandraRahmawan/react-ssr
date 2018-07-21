@@ -1,4 +1,5 @@
-import 'ignore-styles';
+// src/server/index.js
+
 import express from 'express';
 import render from './render';
 import webpackDevMiddleware from 'webpack-dev-middleware';
@@ -9,6 +10,7 @@ import webpackConfig from '../../webpack.config';
 const app = express();
 const compiler = webpack(webpackConfig);
 
+app.use(express.static('public'));
 app.use(
   webpackDevMiddleware(compiler, {
     noInfo: true,
@@ -19,4 +21,4 @@ app.use(
 app.use(webpackHotMiddleware(compiler));
 app.get('*', render);
 
-app.listen(8000, () => console.log('App Listening at Port 8000'));
+app.listen(80010, () => console.log('App Listening at Port 8000'));
