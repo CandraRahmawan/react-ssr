@@ -8,6 +8,7 @@ import webpackConfig from '../../webpack.config';
 const app = express();
 const compiler = webpack(webpackConfig);
 
+app.use(express.static('public'));
 app.use(
   webpackDevMiddleware(compiler, {
     noInfo: true,

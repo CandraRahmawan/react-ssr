@@ -36,11 +36,12 @@
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
+    "babel-inline-import-loader": "^0.1.0",
     "babel-jest": "^23.4.0",
     "babel-loader": "^7.1.4",
+    "babel-plugin-css-modules-transform": "^1.6.1",
     "babel-plugin-inline-import": "^3.0.0",
     "babel-plugin-prismjs": "^1.0.2",
-    "babel-plugin-react-css-modules": "^3.4.2",
     "babel-plugin-styled-components": "^1.5.1",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",

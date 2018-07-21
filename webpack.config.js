@@ -1,7 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
 const SimpleProgressWebpackPlugin = require('simple-progress-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   entry: [
@@ -17,16 +16,28 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
-        use: 'babel-loader',
+        use: [
+          'babel-inline-import-loader',
+          {
+            loader: 'babel-loader',
+            options: {
+              plugins: [
+                [
+                  'inline-import',
+                  {
+                    extensions: ['.txt'],
+                  },
+                ],
+              ],
+              cacheDirectory: false,
+            },
+          },
+        ],
         exclude: /node_modules/,
       },
       {
         test: /\.txt$/,
         use: 'raw-loader',
-      },
-      {
-        test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
     ],
   },
@@ -35,9 +46,6 @@ module.exports = {
       format: 'expanded',
     }),
     new webpack.HotModuleReplacementPlugin(),
-    new MiniCssExtractPlugin({
-      filename: 'styles.css',
-    }),
   ],
   mode: 'development',
 };

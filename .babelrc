@@ -5,7 +5,12 @@
     "stage-1"
   ],
   "plugins": [
-    "react-css-modules",
+    [
+      "css-modules-transform",
+      {
+        "extractCss": "./public/styles.css"
+      }
+    ],
     [
       "babel-plugin-inline-import",
       {

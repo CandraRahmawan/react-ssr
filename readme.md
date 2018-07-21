@@ -8,10 +8,12 @@ Technology :
 1. React 16.4
 2. React Router 4
 3. Webpack 4
-4. Jest, Enzmy
+4. Jest, Enzmy, React Test Renderer
 5. Styled Component
 6. Prettier
 7. Express
+8. Nodemon
+9. PrismJS
 
 run `yarn install` first to install depedencies.
 
