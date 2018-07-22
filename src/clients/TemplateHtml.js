@@ -28,7 +28,7 @@ export default class TemplateHtml extends Component {
         <head>
           <title>Server Side Rendering with ReactJS</title>
           <div
-            id="style"
+            id="styles"
             dangerouslySetInnerHTML={{ __html: this.renderStylesAssets() }}
           />
           <div

@@ -20,3 +20,5 @@ app.use(webpackHotMiddleware(compiler));
 app.get('*', render);
 
 app.listen(8000, () => console.log('App Listening at Port 8000'));
+
+export default app;

@@ -1,6 +1,6 @@
 React with Server Side Rendering :
 
-Tools :
+Tools (Recomendation) :
 1. Yarn version >= 1.6.0
 2. Node version >= 8.X.X
 
@@ -21,3 +21,7 @@ Running :
 `yarn start`
 
 running at http://localhost:8000/
+
+Testing :
+- `yarn test result test with coverage`
+- `yarn test:watch for watching testing unit without coverage`

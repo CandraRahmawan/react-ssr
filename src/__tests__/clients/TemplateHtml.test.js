@@ -1,4 +1,4 @@
-import TemplateHtml from '../clients/TemplateHtml';
+import TemplateHtml from '../../clients/TemplateHtml';
 
 describe('<TemplateHtml />', () => {
   const shallowComponent = shallow(<TemplateHtml />);
@@ -24,5 +24,6 @@ describe('<TemplateHtml />', () => {
   test('Should be render assets js & style', () => {
     expect(shallowComponent.find('#styled-components')).toHaveLength(1);
     expect(shallowComponent.find('#script-assets')).toHaveLength(1);
+    expect(shallowComponent.find('#styles')).toHaveLength(1);
   });
 });

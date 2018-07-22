@@ -1,14 +1,23 @@
 module.exports = {
   setupFiles: ['<rootDir>/test/setup.js'],
   collectCoverage: true,
-  collectCoverageFrom: ['src/**/*.{js}', '!**/node_modules/**'],
+  collectCoverageFrom: ['<rootDir>/src/**/*.{js}'],
+  verbose: true,
+  bail: true,
   coverageThreshold: {
     global: {
-      branches: 0,
-      functions: 30,
-      lines: 15,
-      statements: 15,
+      branches: 100,
+      functions: 100,
+      lines: 75,
+      statements: 75,
     },
   },
   coverageDirectory: '__coverage__',
+  transform: {
+    '\\.txt$': 'jest-raw-loader',
+    '\\.js$': 'babel-jest',
+  },
+  moduleNameMapper: {
+    '\\.(css)$': 'identity-obj-proxy',
+  },
 };
