@@ -23,5 +23,5 @@ Running :
 running at http://localhost:8000/
 
 Testing :
-- `yarn test result test with coverage`
-- `yarn test:watch for watching testing unit without coverage`
+- `yarn test` result test with coverage
+- `yarn test:watch` for watching testing unit without coverage
