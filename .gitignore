@@ -1,3 +1,4 @@
 /node_modules
 .idea
 __coverage__
+src/**/**/__snapshots__
